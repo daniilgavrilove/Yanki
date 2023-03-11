@@ -1,0 +1,81 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+$accordionBp: 600px;
+
+.footer{
+	@include adaptiveValue("margin-top", 100, 60);
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	row-gap: rem(20);
+	column-gap: rem(10);
+
+	@media (max-width:rem(790)){
+		grid-template-columns: repeat(2,50%); 
+	}
+
+	@media (max-width:$accordionBp){
+		grid-template-columns: repeat(1,100%); 
+		row-gap: rem(0);
+
+	}
+}
+
+.column{
+	@media (max-width: $accordionBp){
+		&:last-child{
+			margin-top: rem(15);
+
+			&>.title{
+				margin-bottom: rem(10);
+			}
+		}
+	}
+}
+
+.title{
+	@media (min-width:$accordionBp){
+		margin-bottom: rem(15);
+	}
+
+	@media (max-width: $accordionBp){
+		text-align: center;
+
+	
+	}
+}
+
+.item{
+	padding: rem(2) 0;
+
+	@media (max-width: $accordionBp){
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.link{
+	display: flex;
+	gap: rem(5);
+	align-items: center;
+
+	color: var(--main-color);
+
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover){
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+}
+
+.label{
+	margin-top: rem(10);
+	margin-bottom: rem(10);
+	font-size: rem(12);
+	text-align: center;
+}

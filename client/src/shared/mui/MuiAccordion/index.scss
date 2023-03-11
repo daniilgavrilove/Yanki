@@ -1,0 +1,41 @@
+.accordion{
+	&.MuiAccordion-root{
+		border-bottom: 0.3px solid rgb(37 37 37 / 100%);
+		border-radius: unset !important;
+		box-shadow: none;
+	}
+
+	.MuiAccordionSummary-content{
+		transform: translate(2%,0);
+		justify-content: center !important;
+	}
+
+	.MuiButtonBase-root.left{
+		.MuiAccordionSummary-content{
+			justify-content: left !important;
+		}
+	}
+	
+	.MuiButtonBase-root{
+		padding:0 !important;
+
+		&.MuiAccordionSummary-content{
+			margin: 0 !important;
+
+			.left &{
+				justify-content: start !important;
+			}
+		}
+
+		&.MuiAccordionSummary-content.Mui-expanded{
+			margin: 0 !important;
+		}
+
+		&.Mui-expanded{
+			min-height: 0 !important;
+
+		}
+	}
+
+
+}

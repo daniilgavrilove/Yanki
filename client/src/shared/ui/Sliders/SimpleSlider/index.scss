@@ -1,0 +1,95 @@
+@use "sass:math";
+@import "../../../../shared/styles/mixins";
+
+.categorySwiper{
+	.slide{
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+
+		@media (any-hover: hover){
+			&:hover{
+				img{
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		img{
+			width: 100%;
+			object-fit: contain;
+			transition: all 0.8s ease 0s;
+		}
+	}
+
+	.categoryName{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+		height: rem(40);
+
+		font-size: rem(20);
+		color:var(--white);
+
+		background: rgb(224 190 162 / 75%);
+		backdrop-filter: blur(3px);
+	}
+}
+
+.arrows{
+	pointer-events: none;
+
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 20px;
+	transform: translate(0,-50%);
+
+	display: flex;
+	justify-content: space-between;
+
+	width: calc(100% - 40px);
+
+	@media (max-width:rem(767.98)){
+		display: none; 
+	}
+}
+
+.arrow{
+	pointer-events: all;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: rem(40);
+	height: rem(40);
+
+	background-color: var(--light-brown);
+
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover){
+		&:hover{
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
+
+			
+		}
+	}
+
+}
+
+.next{
+
+}
+
+.prev{
+	transform: rotate(-180deg);
+}

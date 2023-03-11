@@ -1,0 +1,64 @@
+@use "sass:math";
+@import '../../styles/mixins';
+
+.burger {
+	cursor: pointer;
+
+	position: relative;
+	z-index: 5;
+
+	display: block;
+
+	width: 34px;
+	height: 20px;
+
+	&::before {
+		top: 0;
+		width: 100%;
+	}
+
+	&::after {
+		bottom: 0;
+		width: rem(18);
+	}
+
+	span{
+		top: calc(50% - 2px);
+		width: rem(26);
+
+	}
+
+	span,
+	&::before,
+	&::after {
+		content: "";
+
+		position: absolute;
+		left: 0;
+
+		height: 4px;
+
+		background-color: var(--white);
+
+		transition: all 0.3s ease 0s;
+	}
+
+	
+	&.menuOpen  {
+		&::before {
+			top: calc(50% - 2px);
+			transform: rotate(-45deg);
+			width: 100%;
+		}
+
+		&::after {
+			bottom: calc(50% - 2px);
+			transform: rotate(45deg);
+			width: 100%;
+		}
+
+		span {
+			transform: scale(0);
+		}
+	}
+}

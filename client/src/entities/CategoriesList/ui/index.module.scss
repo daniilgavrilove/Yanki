@@ -1,0 +1,37 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.categoriesList{
+
+}
+
+.categoriesTitle{
+	font-size: rem(20);
+
+	@media (min-width:$mobile){
+		@include adaptiveValue("margin-bottom", 30, 15);
+		  
+	}
+
+	@media (max-width:$mobile){
+		width: 100%; 
+	}
+}
+
+.categoriesOption{
+	cursor: pointer;
+	padding: rem(5) 0 rem(5) rem(3);
+	border-radius: 3px;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover){
+		&:hover{
+			background-color: rgb(237 237 237 / 33.7%);
+		}
+	}
+
+	&.active{
+		background-color: var(--light-grey);
+	}
+}
+

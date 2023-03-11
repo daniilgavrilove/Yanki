@@ -1,0 +1,17 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+
+.breadcrumbs{
+	@include adaptiveValue("margin-top", 110, 80);
+	display: flex;
+	column-gap: rem(10);
+
+	@include adaptiveValue("margin-bottom", 30, 15);
+}
+
+.breadcrumb{
+	&:last-child{
+		opacity: 0.6;
+	}
+}

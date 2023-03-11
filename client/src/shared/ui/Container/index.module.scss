@@ -1,0 +1,8 @@
+@use "sass:math";
+@import '../../styles/mixins';
+
+.container{
+	max-width: rem(1170);
+	margin: 0 auto;
+	padding: 0 rem(15) ;
+}

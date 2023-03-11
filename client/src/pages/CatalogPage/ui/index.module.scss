@@ -1,0 +1,12 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.catalogBody{
+	display: grid;
+	grid-template-columns: rem(130) 1fr;
+	gap: rem(15);
+
+	@media (max-width:$mobile){
+		grid-template-columns: 100%; 
+	}
+}

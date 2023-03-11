@@ -1,0 +1,10 @@
+@use "sass:math";
+@import "../../../../shared/styles/mixins";
+
+
+.rangeSlider{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(45) rem(30) rem(10) rem(30);
+}

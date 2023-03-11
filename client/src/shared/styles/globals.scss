@@ -1,0 +1,33 @@
+@use "sass:math";
+
+:root{
+	// Цвета
+	--main-color:rgb(37 37 37 / 100%);
+	--white:rgb(255 255 255 / 100%);
+	--brown:rgb(204 168 138 / 100%);
+	--light-brown:rgb(224 190 162);
+	--light-grey:rgb(237 237 237);
+	--grey: rgb(61 61 61 / 50%) ;
+	--dark-grey: rgb(61 61 61 / 80%) ;
+
+
+	// Шрифт
+	--font-size: 16px;
+	--font-weight:300;
+	--font-family:'Raleway';
+	--line-height:1.5rem;
+	
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+	line-height: var(--line-height);
+
+	// Скролл заблокирован
+	.lock &{
+		touch-action: none;
+		overflow: hidden;
+	}
+}

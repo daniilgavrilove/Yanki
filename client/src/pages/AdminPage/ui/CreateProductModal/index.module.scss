@@ -1,0 +1,42 @@
+.modal{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 15px;
+	align-items: center;
+}
+
+.divisionLabel {
+	position: relative;
+
+	grid-column: span 2;
+
+	margin-top: 20px;
+	margin-bottom: 2rem;
+
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-align: center;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+
+		width: 100%;
+		height: 1px;
+
+		background-color: var(--main-color);
+	}
+}
+
+.images{
+	grid-column: span 2;
+
+}
+
+.addInfoBtn {
+	grid-column: span 2;
+	margin-bottom: 1rem;
+}

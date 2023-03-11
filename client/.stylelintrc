@@ -1,0 +1,45 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-clean-order",
+		"stylelint-config-standard-scss"
+	],
+	"plugins": [
+		"stylelint-order",
+		"stylelint-scss"
+	],
+	"rules": {
+		"indentation": [
+			"tab"
+		],
+		"color-hex-case": "upper",
+		"no-eol-whitespace": null,
+		"declaration-empty-line-before": null,
+		"selector-class-pattern": null,
+		"scss/dollar-variable-pattern": null,
+		"declaration-block-no-duplicate-properties": true,
+		"order/order": [
+			"declarations",
+			{
+				"type": "at-rule",
+				"name": "media"
+			},
+			{
+				"type": "rule",
+				"selector": "^&::(before|after)"
+			},
+			{
+				"type": "rule",
+				"selector": "^&:\\w"
+			},
+			{
+				"type": "rule",
+				"selector": "^&_"
+			},
+			{
+				"type": "rule",
+				"selector": "^."
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.filters{
+	position: relative;
+	z-index: 3;
+
+	display: flex;
+	row-gap:rem(10);
+	column-gap:rem(34);
+
+	@media (max-width:$mobile){
+		flex-direction: column; 
+	}
+}
+
+.filterTitle{
+	font-size: rem(22);
+}

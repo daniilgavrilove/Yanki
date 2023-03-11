@@ -1,0 +1,50 @@
+
+.thumbSlider{
+	.swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+ 
+	.swiper {
+		width: 100%;
+		height: 300px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+ 
+	.swiper-slide {
+		background-position: center;
+		background-size: cover;
+	}
+ 
+	.mainSlider {
+		width: 100%;
+		height: 80%;
+	}
+ 
+	.thumbsSlider {
+		box-sizing: border-box;
+		height: 100px;
+		padding: 10px 0;
+	}
+ 
+	.thumbsSlider .swiper-slide {
+		width: 100px;
+		height: 100px;
+		opacity: 0.4;
+	}
+ 
+	.thumbsSlider .swiper-slide-thumb-active {
+		opacity: 1;
+	}
+ 
+	.swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

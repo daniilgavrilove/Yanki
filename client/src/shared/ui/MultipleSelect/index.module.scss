@@ -1,0 +1,92 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.select{
+	position: relative;
+}
+
+.title{
+	cursor:pointer;
+
+	display: flex;
+	gap: rem(5);
+	align-items: center;
+
+	font-size: rem(18);
+	color: var(--white);
+}
+
+.arrow{
+	display: block;
+	transition: all 0.3s ease 0s;
+
+	&.open{
+		transform: rotate(-180deg);
+	}
+}
+
+.list{
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	min-width: rem(150);
+	padding: rem(5);
+
+	visibility: hidden;
+	opacity: 0;
+	background-color: var(--white);
+	border-radius: 5px;
+	box-shadow: rgb(0 0 0 / 35%) 0 5px 15px;
+
+	transition: all 0.3s ease 0s;
+
+	&.open{
+		top: 102%;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	
+}
+
+.options{
+	padding: rem(10);
+}
+
+.option{
+	cursor:pointer;
+
+	width: 100%;
+	padding: 3px;
+
+	border-radius: 3px;
+
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover){
+		&:hover{
+			background-color: var(--light-grey);
+			
+		}
+	}
+}
+
+.activeItemLabel{
+	display: flex;
+
+	padding: rem(1) rem(4);
+
+	font-size: rem(13);
+
+	background-color: rgb(217 217 217);
+	border-radius: 3px;
+
+	p{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+	}
+}

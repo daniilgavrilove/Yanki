@@ -1,0 +1,65 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.select{
+	position: relative;
+}
+
+.title{
+	cursor:pointer;
+
+	display: flex;
+	gap: rem(5);
+	align-items: center;
+
+	font-size: rem(18);
+	color: var(--white);
+}
+
+.arrow{
+	display: block;
+	transition: all 0.3s ease 0s;
+
+	&.open{
+		transform: rotate(-180deg);
+	}
+}
+
+.list{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	padding: rem(5);
+
+	visibility: hidden;
+	opacity: 0;
+	background-color: var(--white);
+	border-radius: 5px;
+	box-shadow: rgb(0 0 0 / 35%) 0 5px 15px;
+
+	transition: all 0.3s ease 0s;
+
+	&.open{
+		top: 102%;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	
+}
+
+.option{
+	cursor:pointer;
+	padding: 3px;
+	border-radius: 3px;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover){
+		&:hover{
+			background-color: var(--light-grey);
+			
+		}
+	}
+}

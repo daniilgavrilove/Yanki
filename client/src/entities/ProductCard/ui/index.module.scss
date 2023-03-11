@@ -1,0 +1,58 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.productCard{
+	position: relative;
+	justify-content: center;
+}
+
+.productInfo{
+	text-align: center;
+}
+
+.title{
+	margin-top: rem(15);
+	margin-bottom: rem(5);
+
+	a{
+		color:inherit;
+	}
+
+	p{
+		color: var(--brown);
+	}
+}
+
+.price{
+	margin-bottom: rem(5);
+	font-weight: 700;
+
+}
+
+.sizes{
+	display: flex;
+	gap: rem(5);
+	justify-content: center;
+
+	margin-bottom: rem(5);
+
+	color: var(--grey);
+
+	p{
+
+	}
+}
+
+.colors{
+	display: flex;
+	gap: rem(5);
+	justify-content: center;
+
+	p{
+		width: rem(14);
+		height: rem(14);
+		border: 1px solid var(--main-color);
+		border-radius: 50%;
+	}
+}
+

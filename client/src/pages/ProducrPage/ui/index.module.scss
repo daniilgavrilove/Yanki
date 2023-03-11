@@ -1,0 +1,14 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.productBody {
+	display: grid;
+	grid-template-columns: 450/1200*100% 1fr;
+
+	@include adaptiveValue("gap", 50, 10);
+	@include adaptiveValue("padding-bottom", 100, 50);
+
+	@media (max-width:$mobile){
+		grid-template-columns: 100%; 
+	}
+}

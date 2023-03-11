@@ -1,0 +1,89 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.price{
+	font-weight: 700;
+
+	@include adaptiveValue("margin-bottom", 20, 15);
+}
+
+.colors{
+	display: flex;
+	gap: rem(8);
+	align-items: center;
+	margin-bottom: rem(10);
+}
+
+
+.color{
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: rem(24);
+	height: rem(24);
+
+	border: 1px solid var(--main-color);
+	border-radius: 50%;
+
+
+	
+}
+
+.activeColor{
+	&::after{
+		content:'';
+
+		position: absolute;
+
+		width: rem(30);
+		height: rem(30);
+
+		border: 1px solid var(--main-color);
+		border-radius: 50%;
+	}
+}
+
+.activeColorName{
+	font-size: rem(14);
+	color: var(--brown);
+
+	@include adaptiveValue("margin-bottom", 20, 15);
+}
+
+.sizesSelect{
+	padding: rem(15) rem(20);
+	border: 1px solid var(--main-color);
+
+	@include adaptiveValue("margin-bottom", 20, 15);
+
+	&>:first-child{
+		justify-content: space-between;
+	}
+}
+
+.actions{
+	display: grid;
+
+	@media (min-width:$mobile){
+		grid-template-columns: repeat(2,1fr);
+	}
+	
+
+	@include adaptiveValue("gap", 20, 15);
+	@include adaptiveValue("margin-bottom", 20, 15);
+}
+
+.description{
+
+}
+
+.descriptionTitle{
+	@include adaptiveValue("margin-bottom", 20, 15);
+}
+
+.accordionOption{
+	font-size: rem(14);
+}

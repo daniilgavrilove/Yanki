@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"target": "es5",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"allowJs": false,
+		"skipLibCheck": true,
+		"strict": true,
+		"strictPropertyInitialization": false, //необязательно инициализировать каждое свойстов класса
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"incremental": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+	},
+	"include": [
+		"addnext-env.d.ts",
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"components/UI-kit/Button/Button.tsx",
+		"src/shared/lib/hooks/useScroll.jsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

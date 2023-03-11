@@ -1,0 +1,9 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.adminPageLayout{
+	@include adaptiveValue("margin-top", 110, 80);
+	display: flex;
+	flex-direction: column;
+	gap: rem(20);
+}

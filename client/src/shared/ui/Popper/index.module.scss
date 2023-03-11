@@ -1,0 +1,58 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.popper{
+	position: relative;
+}
+
+.list{
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	min-width: rem(240);
+	padding: rem(5);
+
+	visibility: hidden;
+	opacity: 0;
+	background-color: var(--white);
+	border-radius: 5px;
+	box-shadow: rgb(0 0 0 / 35%) 0 5px 15px;
+
+	transition: all 0.3s ease 0s;
+
+	&.open{
+		z-index: 5;
+		top: 102%;
+		visibility: visible;
+		opacity: 1;
+
+	}
+
+	&.fullWidth{
+		width: 100vw;
+		margin: 0 rem(15)
+		
+	}
+}
+
+.title{
+	cursor:pointer;
+
+	display: flex;
+	gap: rem(8);
+	align-items: center;
+
+	font-size: rem(18);
+}
+
+.arrow{
+	display: block;
+	transition: all 0.3s ease 0s;
+
+	&.open{
+		transform: rotate(-180deg);
+	}
+}

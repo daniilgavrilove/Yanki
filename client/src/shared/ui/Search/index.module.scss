@@ -1,0 +1,45 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.search{
+	display: flex;
+
+	background: var(--white);
+	border: 1px solid rgb(37 37 37 / 100%);
+	border-radius: 20px;
+
+	transition: all 0.3s ease 0s;
+
+	&:focus-within{
+		border-color:var(--brown);
+	}
+
+	&:hover{
+		border-color:rgb(169 169 169);
+
+	}
+}
+
+.input{
+	flex: 1 1 auto;
+
+	padding: rem(10) 0 rem(10) rem(20);
+
+	background-color: transparent;
+	border:0;
+	outline:none;
+
+
+	
+
+	
+
+	&::placeholder{
+		opacity: 0.5;
+	}
+}
+
+.button{
+	margin-right: rem(12);
+	background-color: transparent;
+}

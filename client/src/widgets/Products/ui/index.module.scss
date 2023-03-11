@@ -1,0 +1,9 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.products{
+	@include adaptiveValue("margin-top", 30, 15);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+	gap: rem(15);
+}

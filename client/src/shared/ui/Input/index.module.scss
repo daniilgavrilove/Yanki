@@ -1,0 +1,30 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+
+
+.singleInput{
+	flex: 1 1 auto;
+
+	padding: rem(15)  rem(40) ;
+
+	text-align: center;
+
+	background-color: transparent;
+	border: 0.5px solid rgb(37 37 37 / 100%);
+	outline:none;
+
+	transition: all 0.3s ease 0s;
+
+	&:focus{
+		border-color:var(--light-brown);
+	}
+
+
+
+	&::placeholder{
+		opacity: 0.5;
+	}
+}
+
+

@@ -1,0 +1,7 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.categories{
+	@include adaptiveValue("padding-top",95 ,60 );
+	@include adaptiveValue("padding-bottom", 95, 60);
+}

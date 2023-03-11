@@ -1,0 +1,46 @@
+version: '3.0'
+
+services:
+  frontend:
+    container_name: client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: react
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+
+  nest:
+    container_name: nest
+    build:
+      context: ./nest
+      dockerfile: Dockerfile
+    env_file:
+      - .development.env
+    volumes:
+      - ./nest:/app
+      - /server/app/node_modules
+    ports:
+      - 5000:5000
+      - 9229:9229
+    command: npm run start:dev
+    depends_on:
+      - postgres
+    restart: always
+  postgres:
+    container_name: postgres
+    image: postgres:12
+    env_file:
+      - .development.env
+    environment:
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pgdata:

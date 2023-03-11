@@ -1,0 +1,11 @@
+@use "sass:math";
+@import "../../../../shared/styles/mixins";
+
+.adminLabel {
+	margin-bottom: 1.5rem;
+}
+
+.label {
+	margin-bottom: 1rem;
+	font-weight: 300;
+}

@@ -1,0 +1,11 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.favoriteButton{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--brown);
+	border-radius: 0 0 0 20px;
+}

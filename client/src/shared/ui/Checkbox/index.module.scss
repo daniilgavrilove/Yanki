@@ -1,0 +1,65 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.checkbox {
+	position: relative;
+
+	&:not(:last-child) {
+		margin-bottom: em(5);
+	}
+}
+
+.input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+
+	
+	&:checked + .label::after {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.label {
+	cursor: pointer;
+
+	position: relative;
+
+	display: inline-flex;
+	gap: 7px;
+	align-items: center;
+
+	&::after,
+	&::before {
+		content: "";
+
+		flex: 0 0 15px;
+
+		width: 15px;
+		height: 15px;
+
+		transition: all 0.3s ease 0s;
+
+	}
+
+	&::before {
+		border: 1px solid var(--brown);
+		border-radius: 3px;
+	}
+
+	&::after {
+		position: absolute;
+		bottom: 15%;
+		left: 0;
+
+		visibility: hidden;
+		opacity: 0;
+		background: url("./check.svg") no-repeat center center;
+	}
+}
+
+.text {
+}
+

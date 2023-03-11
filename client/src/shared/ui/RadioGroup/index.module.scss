@@ -1,0 +1,74 @@
+@use "sass:math";
+@import "../../../shared/styles/mixins";
+
+.options {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.item {
+	cursor: pointer;
+	position: relative;
+
+	&:not(:last-child) {
+		margin-bottom: em(5);
+	}
+}
+
+.input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+
+	&:focus + .label::before {
+	}
+
+	&:checked + .label::before {
+	}
+
+	&:checked + .label::after {
+		transform: scale(1);
+	}
+}
+
+.label {
+	cursor: pointer;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+	&::before {
+		content: "";
+
+		flex: 0 0 14px;
+
+		width: 14px;
+		height: 14px;
+
+		border: 1px solid var(--brown);
+		border-radius: 50%;
+	}
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		top: 8px;
+		left: 3px;
+		transform: scale(0);
+
+		width: 8px;
+		height: 8px;
+
+		background-color: var(--brown);
+		border-radius: 50%;
+
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.text {
+}
+

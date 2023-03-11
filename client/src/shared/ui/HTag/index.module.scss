@@ -1,0 +1,28 @@
+@use "sass:math";
+@import '../../styles/mixins';
+
+.title_h1{
+	display: block;
+	font-weight: 300;
+	color: var(--white);
+	opacity: 0.85;
+
+	@include adaptiveValue("margin-bottom", 40, 32);
+	@include adaptiveValue("font-size", 46, 32);
+}
+
+.title_h2{
+	font-weight: 300;
+
+	@include adaptiveValue("font-size", 36, 24);
+	@include adaptiveValue("margin-bottom", 50, 30);
+
+}
+
+.title_h3{
+	font-weight: 300;
+
+	@include adaptiveValue("font-size", 20, 18);
+	@include adaptiveValue("margin-bottom", 20, 15);
+
+}

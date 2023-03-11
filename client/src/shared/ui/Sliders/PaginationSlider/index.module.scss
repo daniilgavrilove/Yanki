@@ -1,0 +1,17 @@
+@use "sass:math";
+@import "../../../../shared/styles/mixins";
+
+.paginationSlider{
+	max-width: 100%;
+	min-height: 0;
+
+	.slide{
+		max-width: 100%;
+
+		img{
+			width: 100%;
+			max-width: 100%;
+			object-fit: contain;
+		}
+	}
+}

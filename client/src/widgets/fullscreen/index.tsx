@@ -1,0 +1,1 @@
+export { Fullscreen } from 'widgets/fullscreen/ui'
